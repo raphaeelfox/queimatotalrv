@@ -1,0 +1,470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="pt-BR"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Catálogo de Queima de Estoque&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Arial', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f4f4f9;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 90%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 1200px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.logo {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.logo img {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 150px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.category {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 40px 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.category h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 2px solid #25d366;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.products-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.product {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 32%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.3s ease, box-shadow 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.product:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-5px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.product img {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>object-fit: cover;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.product-info {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.product-info h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.product-info .price {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #e63946;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.product-info p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #666;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.product-info a {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #25d366;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: background-color 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.product-info a:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #1ebe5d;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.product {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>width: 48%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 480px) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.product {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="logo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="https://i.ibb.co/NpTdhHM/LOJA-RV-4.png" alt="Logo da Loja"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Smartwatches --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="category"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Smartwatches&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="products-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_996420-MLU77331382127_062024-F.JPG" alt="Smartwatch U9 Ultra Laranja"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Smartwatch U9 Ultra Laranja&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$197,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Smartwatch U9 Ultra na cor laranja, com diversas funcionalidades.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Smartwatch%20U9%20Ultra%20Laranja."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_990937-MLB75549585774_042024-F.JPG" alt="Smartwatch W29S Pro"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Smartwatch W29S Pro&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$197,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Smartwatch W29S Pro, design moderno e funcionalidades avançadas.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Smartwatch%20W29S%20Pro."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_781671-MLB71730654288_092023-F.JPG" alt="Smartwatch W69 Ultra Mini"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Smartwatch W69 Ultra Mini&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$269,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Smartwatch W69 Ultra Mini, compacto e funcionalidades avançadas.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Smartwatch%20W69%20Ultra%20Mini."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_781671-MLB71730654288_092023-F.JPG" alt="Smartwatch W69 Ultra Plus"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Smartwatch W69 Ultra Plus&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$269,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Smartwatch W69 Ultra Plus, estilo e tecnologia no pulso.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Smartwatch%20W69%20Ultra%20Plus."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_923936-MLB77276804764_072024-F.JPG" alt="Smartwatch Ultra 3 Mini"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Smartwatch Ultra 3 Mini&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$279,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Smartwatch Ultra 3 Mini, estilo e tecnologia no pulso.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Smartwatch%20Ultra%203%20Mini."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Fones Bluetooth --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="category"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Fones Bluetooth&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="products-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_742143-MLB74979318333_032024-F.jpg" alt="Fone HMASTON RS66"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Fone HMASTON RS66&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$75,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Fone de ouvido sem fio com som de alta qualidade.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Fone%20HMASTON%20RS66."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_686321-MLU77493107086_072024-F.JPG" alt="Fone JBL Tune 510BT"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Fone JBL Tune 510BT&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$69,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Fone de ouvido JBL Tune 510BT, som superior e conexão Bluetooth.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="</p>
+<p class="p2"><br></p>
+<p class="p1">https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Fone%20JBL%20Tune%20510BT."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://superelectronics.co.za/wp-content/uploads/2023/10/Screenshot_20220629-135747.png" alt="Fone Patinha Hello Bear BK5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Fone Patinha Hello Bear BK5&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$69,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Fone infantil com design de patinha, seguro para os pequenos.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Fone%20Patinha%20Hello%20Bear%20BK5."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_905512-MLU77118780404_062024-F.JPG" alt="Fone AirPods Max Azul"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Fone AirPods Max Azul&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$129,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Fone AirPods Max, design premium e som excepcional.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Fone%20AirPods%20Max%20Azul."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_700726-CBT72983173024_112023-F.JPG" alt="Fone JBL JB860"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Fone JBL JB860&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$89,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Fone JBL JB860, som poderoso com graves profundos.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Fone%20JBL%20JB860."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_689999-MLU77385305341_072024-F.JPG" alt="Fone Hrebos HS-95 Vermelho"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Fone Hrebos HS-95 Vermelho&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$89,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Fone Hrebos HS-95 Vermelho, som de alta qualidade e design moderno.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Fone%20Hrebos%20HS-95%20Vermelho."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Acessórios --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="category"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Acessórios&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="products-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_628037-MLU70375961597_072023-F.jpg" alt="HUB USB 2.0 4 entradas"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;HUB USB 2.0 4 entradas&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$10,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Hub USB 2.0 com 4 portas, ideal para múltiplos dispositivos.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20HUB%20USB%202.0%204%20entradas."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_746320-MLU74075525134_012024-F.JPG" alt="Controle para TVBox"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Controle para TVBox&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$12,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Controle remoto para TVBox, compatível com vários modelos.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Controle%20para%20TVBox."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_935082-MLU77466685595_072024-F.jpg" alt="Lapela P2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Lapela P2&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$15,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Microfone de lapela P2, ideal para gravações de áudio.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20na%20Lapela%20P2."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_926047-MLB45495599468_042021-F.jpg" alt="Balança de Precisão Pocket"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Balança de Precisão Pocket&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$30,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Balança digital de precisão para pequenas pesagens.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20na%20Balan%C3%A7a%20de%20Precis%C3%A3o%20Pocket."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_852157-MLU74484924234_022024-F.JPG" alt="Adaptador Bluetooth P2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Adaptador Bluetooth P2&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$10,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Adaptador Bluetooth para P2, transforma dispositivos com fio em sem fio.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Adaptador%20Bluetooth%20P2."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_652082-MLU74495284300_022024-F.JPG" alt="Roteador PixLink"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Roteador PixLink&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$79,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Roteador PixLink, ideal para conexões rápidas e estáveis.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Roteador%20PixLink."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_803473-MLB76684768821_052024-F.JPG" alt="Cabo H'maston Tipo C Para Tipo C 5v-3a 1m Branco H88-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Cabo H'maston Tipo C Para Tipo C 5v-3a 1m Branco H88-4&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$25,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Cabo Tipo C para Tipo C, ideal para transferência de dados e carregamento rápido.&lt;/</p>
+<p class="p2"><br></p>
+<p class="p1">p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Cabo%20H'maston%20Tipo%20C%20Para%20Tipo%20C%205v-3a%201m%20Branco%20H88-4."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_976539-MLB45304028401_032021-F.JPG" alt="Cabo PD Rápido"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Cabo PD Rápido&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$20,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Cabo Power Delivery (PD) para carregamento rápido.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Cabo%20PD%20R%C3%A1pido."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_954347-MLB78320216985_082024-F.JPG" alt="Cabo Turbo 4.0 2 Metros iPhone"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Cabo Turbo 4.0 2 Metros iPhone&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$25,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Cabo Turbo 4.0 com 2 metros, ideal para carregamento rápido.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Cabo%20Turbo%204.0%202%20Metros%20iPhone."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_678343-MLB48068722139_102021-F.JPG" alt="Cabo Turbo V8 2 Metros"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Cabo Turbo V8 2 Metros&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$20,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Cabo V8 com 2 metros, para carregamento rápido e transferência de dados.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Cabo%20Turbo%20V8%202%20Metros."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_969613-MLU75143561540_032024-F.JPG" alt="Cabo Turbo V8 1.2M"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Cabo Turbo V8 1.2M&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$19,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Cabo V8 com 1.2 metros, ideal para carregamento rápido e transferência de dados.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Cabo%20Turbo%20V8%201.2M."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_908295-MLB47740545824_102021-F.JPG" alt="Cabo Nylon Tipo C 1M"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Cabo Nylon Tipo C 1M&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$19,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Cabo USB Tipo C com 1 metro, revestido em nylon para maior durabilidade.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Cabo%20Nylon%20Tipo%20C%201M."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_689153-MLB71931610768_092023-F.JPG" alt="Película para iPhone"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Película para iPhone&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$10,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Película protetora para iPhone, protege a tela contra arranhões e quedas.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20na%20Pel%C3%ADcula%20para%20iPhone."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://img.olx.com.br/images/62/623496498767520.jpg" alt="Adaptador Wireless Ketchup"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Adaptador Wireless Ketchup&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$25,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Adaptador wireless para conexão sem fio de dispositivos eletrônicos.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Adaptador%20Wireless%20Ketchup."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_723819-MLB77009376694_062024-F.JPG" alt="Super Suporte De Espelho Retrovisor De Carro - 360°"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Super Suporte De Espelho Retrovisor De Carro - 360°&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$20,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Suporte para espelho retrovisor de carro com rotação de 360°.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Super%20Suporte%20De%20Espelho%20Retrovisor%20De%20Carro%20-%20360%C2%B0."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://terracoimportson.com.br/cdn/shop/files/e6dc40b5-6ed9-41a5-9bef-ea3194ce7eeb_1000x.jpg" alt="Teclado e Mouse Ketchup KT-2015"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Teclado e Mouse Ketchup KT-2015&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$89,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Combo de teclado e mouse Ketchup KT-2015, design ergonômico e conexão sem fio.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Teclado%20e%20Mouse%20Ketchup%20KT-2015."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_748980-MLB71415294583_082023-F.JPG" alt="Suporte Veicular Magnético - HS369"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Suporte Veicular Magnético - HS369&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$20,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Suporte veicular magnético para smartphones, fácil de instalar.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Suporte%20Veicular%20Magn%C3%A9tico%20-%20HS369."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_</p>
+<p class="p2"><br></p>
+<p class="p1">2X_975815-MLB73371876340_122023-F.jpg" alt="Câmera Lâmpada Wi-Fi"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Câmera Lâmpada Wi-Fi&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$69,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Câmera disfarçada em lâmpada, com conexão Wi-Fi e gravação em HD.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20na%20C%C3%A2mera%20L%C3%A2mpada%20Wi-Fi."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_870912-MLU73214255959_122023-F.jpg" alt="Pochete de Corrida"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Pochete de Corrida&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$35,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Pochete prática e resistente, ideal para corridas e caminhadas.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20na%20Pochete%20de%20Corrida."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_717175-MLB75811674388_042024-F.JPG" alt="Pochete Esportiva KTS-03"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Pochete Esportiva KTS-03&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$35,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Pochete esportiva com múltiplos compartimentos.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20na%20Pochete%20Esportiva%20KTS-03."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lsba2qgbc93he1.JPG" alt="Abraçadeira Esportiva KTS"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Abraçadeira Esportiva KTS&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$30,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Abraçadeira esportiva, ideal para atividades físicas.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20na%20Abra%C3%A7adeira%20Esportiva%20KTS."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_748980-MLB71415294583_082023-F.JPG" alt="Pochete Esportiva Ketchup"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Pochete Esportiva Ketchup&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$30,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Pochete esportiva, ideal para armazenar objetos durante atividades físicas.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20na%20Pochete%20Esportiva%20Ketchup."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_862328-MLU77108104057_062024-F.JPG" alt="Máquina Daling DL-1585"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Máquina Daling DL-1585&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$69,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Máquina de cortar cabelo Daling DL-1585, compacta e eficiente.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20na%20M%C3%A1quina%20Daling%20DL-1585."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="product"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://http2.mlstatic.com/D_NQ_NP_2X_977582-MLB73196501189_122023-F.JPG" alt="Barbeador Depilador DL-9215"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="product-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;Barbeador Depilador DL-9215&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="price"&gt;R$89,00&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Barbeador e depilador DL-9215, eficiente e seguro para uso pessoal e profissional.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="https://wa.me/5581974016183?text=Ol%C3%A1,%20eu%20tenho%20interesse%20no%20Barbeador%20Depilador%20DL-9215."&gt;COMPRE NO ZAP&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
